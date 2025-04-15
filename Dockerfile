@@ -18,7 +18,4 @@ WORKDIR /root/
 # Копируем бинарник из builder
 COPY --from=builder /app/main .
 
-# Указываем порт, если ты используешь http.ListenAndServe(":8080", ...)
-# EXPOSE 8080
-
 CMD ["./main"]

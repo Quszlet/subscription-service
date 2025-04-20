@@ -18,4 +18,6 @@ WORKDIR /root/
 # Копируем бинарник из builder
 COPY --from=builder /app/main .
 
+RUN mkdir -p logs
+
 CMD ["./main"]

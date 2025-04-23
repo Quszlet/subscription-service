@@ -1,6 +1,9 @@
 package service
 
-import "github.com/Quszlet/subscription-service/internal/repository"
+import (
+	"github.com/Quszlet/subscription-service/internal/repository"
+	"github.com/Quszlet/subscription-service/pkg/logger"
+)
 
 // type User interface {
 // 	Create(user models.User) (int, error)
@@ -14,7 +17,7 @@ type Service struct {
 	
 }
 
-func NewService(r *repository.Repository) *Service {
+func NewService(r *repository.Repository, log logger.Logger) *Service {
 	// return &Service{User: NewUserService(r)}
 	return &Service{}
 }

@@ -4,7 +4,7 @@ RUN go install github.com/air-verse/air@latest
 
 WORKDIR /app
 
-COPY go.mod ./
+COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
@@ -17,7 +17,5 @@ WORKDIR /root/
 
 # Копируем бинарник из builder
 COPY --from=builder /app/main .
-
-RUN mkdir -p logs
 
 CMD ["./main"]

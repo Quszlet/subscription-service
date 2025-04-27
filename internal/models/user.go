@@ -7,7 +7,8 @@ import (
 type User struct {
 	Id           uint   `json:"id"`
 	Login        string `json:"name"`
-	Password     string `json:"password"`
+	Password     string `json:"password"` // Поле с формы
+	HashPassword string // Поле для БД
 	Email        string `json:"email"`
 	DateBirthday string `json:"date_birthday"`
 	Created_at   string `json:"created_at"`
